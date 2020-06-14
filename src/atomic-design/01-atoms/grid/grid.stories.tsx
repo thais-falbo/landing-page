@@ -1,5 +1,6 @@
 import React from "react";
 import Theme from "../../../utils/styled/theme";
+import { number } from "@storybook/addon-knobs";
 import Grid from "./";
 
 export default {
@@ -11,27 +12,27 @@ const Item = () => (
   <div
     style={{
       backgroundColor: Theme.colors.primary,
-      height: "20rem",
+      fontFamily: Theme.fonts.poppins.name,
+      fontSize: "1.6rem",
+      color: "white",
+      height: "30rem",
       width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     }}
-  ></div>
+  >
+    COLUMN
+  </div>
 );
 
-export const Row = () => (
-  <Grid.Container>
-    <Grid.Row>
-      <Grid.Column span={12}>
-        <Item />
-      </Grid.Column>
-    </Grid.Row>
-  </Grid.Container>
-);
+const knobOptions = { min: 1, max: 12, step: 1 };
 
-export const Columns = () => (
+export const Playground = () => (
   <Grid.Container>
     <Grid.Row>
-      {[...Array(12)].map((_, i) => (
-        <Grid.Column key={i}>
+      {[...Array(number("Columns", 12, knobOptions))].map((_, i) => (
+        <Grid.Column key={i} span={number("Column size", 1, knobOptions)}>
           <Item />
         </Grid.Column>
       ))}

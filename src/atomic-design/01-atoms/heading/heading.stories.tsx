@@ -1,12 +1,14 @@
 import React from "react";
+import { number, boolean, text, select, color } from "@storybook/addon-knobs";
 import Heading from "./";
+import Theme from "../../../utils/styled/theme";
 
 export default {
   title: "Atoms|Heading",
   component: Heading,
 };
 
-export const Default = () => (
+export const Levels = () => (
   <>
     <Heading level={1} text="Heading 1" />
     <Heading level={2} text="Heading 2" />
@@ -15,29 +17,12 @@ export const Default = () => (
   </>
 );
 
-export const DefaultUppercase = () => (
-  <>
-    <Heading level={1} text="Heading 1" uppercase />
-    <Heading level={2} text="Heading 2" uppercase />
-    <Heading level={3} text="Heading 3" uppercase />
-    <Heading level={4} text="Heading 4" uppercase />
-  </>
-);
-
-export const Black = () => (
-  <>
-    <Heading level={1} text="Heading 1" weight="black" />
-    <Heading level={2} text="Heading 2" weight="black" />
-    <Heading level={3} text="Heading 3" weight="black" />
-    <Heading level={4} text="Heading 4" weight="black" />
-  </>
-);
-
-export const BlackUppercase = () => (
-  <>
-    <Heading level={1} text="Heading 1" weight="black" uppercase />
-    <Heading level={2} text="Heading 2" weight="black" uppercase />
-    <Heading level={3} text="Heading 3" weight="black" uppercase />
-    <Heading level={4} text="Heading 4" weight="black" uppercase />
-  </>
+export const Playground = () => (
+  <Heading
+    level={number("Level", 1, { min: 1, max: 4, step: 1 })}
+    text={text("Text", "My Heading")}
+    uppercase={boolean("Uppercase", false)}
+    weight={select("Weight", ["bold", "black"], "bold")}
+    color={color("Color", Theme.colors.darkBlue)}
+  />
 );

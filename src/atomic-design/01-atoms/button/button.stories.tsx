@@ -1,5 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
+import { text, boolean, select } from "@storybook/addon-knobs";
 import Button from "./";
 
 export default {
@@ -7,18 +8,12 @@ export default {
   component: Button,
 };
 
-export const Sizes = () => (
-  <>
-    <Button text="small" size="small" onClick={action("Clicked")} />
-    <br />
-    <br />
-    <Button text="normal" onClick={action("Clicked")} />
-    <br />
-    <br />
-    <Button text="large" size="large" onClick={action("Clicked")} />
-  </>
-);
-
-export const Disabled = () => (
-  <Button text="Disabled" disabled onClick={() => {}} />
+export const Playground = () => (
+  <Button
+    text={text("Text", "Click")}
+    size={select("Size", ["small", "normal", "large"], "normal")}
+    onClick={action("click")}
+    disabled={boolean("Disabled", false)}
+    type={select("Type", ["button", "submit", "reset"], "button")}
+  />
 );

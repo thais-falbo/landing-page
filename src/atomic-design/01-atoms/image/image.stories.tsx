@@ -1,4 +1,5 @@
 import React from "react";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import Image from "./";
 import Capsule from "../../../assets/images/capsule.jpg";
 
@@ -7,10 +8,17 @@ export default {
   component: Image,
 };
 
-export const CustomSize = () => (
-  <Image src={Capsule} alt="Capsule" width="100%" height="50rem" />
-);
-
-export const CustomSize2 = () => (
-  <Image src={Capsule} alt="Capsule" width="50rem" height="50rem" />
+export const Playground = () => (
+  <Image
+    src={Capsule}
+    alt="Capsule"
+    width={text("Width", "30rem")}
+    height={text("Height", "30rem")}
+    mirror={boolean("Mirror", false)}
+    position={select(
+      "Position",
+      ["top", "left", "bottom", "right", "center"],
+      "center"
+    )}
+  />
 );

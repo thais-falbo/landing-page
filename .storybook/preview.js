@@ -1,9 +1,10 @@
-// Applies Global CSS to stories
 import React from "react";
-import { ThemeProvider } from "styled-components";
 import { addDecorator } from "@storybook/react";
-import GlobalStyle from "../src/utils/styled/globalStyle";
+import { withKnobs } from "@storybook/addon-knobs";
+
+import { ThemeProvider } from "styled-components";
 import Theme from "../src/utils/styled/theme";
+import GlobalStyle from "../src/utils/styled/globalStyle";
 
 addDecorator((storyFn) => (
   <ThemeProvider theme={Theme}>
@@ -11,3 +12,5 @@ addDecorator((storyFn) => (
     {storyFn()}
   </ThemeProvider>
 ));
+
+addDecorator(withKnobs);
