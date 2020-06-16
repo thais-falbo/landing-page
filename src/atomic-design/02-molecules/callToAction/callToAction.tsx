@@ -8,19 +8,22 @@ import Icon from "../../01-atoms/icon";
 interface Props {
   headingText: string;
   paragraphText: string;
-  button: {
-    text: string;
-    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  };
+  color?: string | undefined;
+  button: React.ComponentProps<typeof Button>;
 }
 
-const CallToAction: FC<Props> = ({ headingText, paragraphText, button }) => (
+const CallToAction: FC<Props> = ({
+  headingText,
+  paragraphText,
+  color,
+  button,
+}) => (
   <>
     <StyledCtaTitle>
-      <Heading text={headingText} color="white" level={1} uppercase />
+      <Heading text={headingText} color={color} level={1} uppercase />
       <Icon.Dot width="2rem" height="2rem" />
     </StyledCtaTitle>
-    <Paragraph text={paragraphText} color="white" />
+    <Paragraph text={paragraphText} color={color} />
     <Button {...button} />
   </>
 );
