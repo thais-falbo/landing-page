@@ -19,7 +19,7 @@ export const Levels = () => (
 
 export const Playground = () => (
   <Heading
-    level={number("Level", 1, { min: 1, max: 4, step: 1 })}
+    level={number("Level", 1, { min: 1, max: 4, step: 1 }) as 1 | 2 | 3 | 4}
     text={text("Text", "My Heading")}
     uppercase={boolean("Uppercase", false)}
     weight={select("Weight", ["bold", "black"], "bold")}
