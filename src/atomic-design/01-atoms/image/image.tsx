@@ -1,5 +1,6 @@
 import React, { FC, memo } from "react";
 import { StyledImg } from "./styled";
+import { imagePosition } from "atomic-design-types";
 
 interface Props {
   src: string;
@@ -7,7 +8,7 @@ interface Props {
   width: string;
   height: string;
   mirror?: boolean;
-  position?: "top" | "left" | "bottom" | "right" | "center";
+  position?: imagePosition;
 }
 
 const Image: FC<Props> = ({

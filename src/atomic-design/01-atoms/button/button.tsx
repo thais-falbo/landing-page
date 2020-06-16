@@ -1,10 +1,11 @@
 import React, { FC, memo } from "react";
 import { StyledBtn } from "./styled";
+import { size } from "atomic-design-types";
 
 interface Props {
   text: string;
   disabled?: boolean;
-  size?: "small" | "normal" | "large";
+  size?: size;
   type?: "button" | "submit" | "reset";
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

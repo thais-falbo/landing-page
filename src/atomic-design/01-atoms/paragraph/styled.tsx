@@ -1,8 +1,9 @@
 import styled, { DefaultTheme } from "styled-components";
+import { size } from "atomic-design-types";
 
 interface Props {
   color: string | undefined;
-  size: "small" | "normal" | "large";
+  size: size;
   theme: DefaultTheme;
 }
 

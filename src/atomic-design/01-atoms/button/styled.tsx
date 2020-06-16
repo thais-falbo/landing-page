@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { darken } from "polished";
+import { size } from "atomic-design-types";
 
 interface Props {
   disabled: boolean;
-  size: "small" | "normal" | "large";
+  size: size;
 }
 
 export const StyledBtn = styled.button<Props>`

@@ -1,12 +1,13 @@
 import React, { FC, memo } from "react";
 import { StyledHeading } from "./styled";
+import { headingLevel, weight } from "atomic-design-types";
 
 interface Props {
   text: string;
-  level: 1 | 2 | 3 | 4;
+  level: headingLevel;
   uppercase?: boolean;
   color?: string | undefined;
-  weight?: "bold" | "black";
+  weight?: weight;
 }
 
 const Heading: FC<Props> = ({
@@ -16,7 +17,7 @@ const Heading: FC<Props> = ({
   weight = "bold",
   uppercase = false,
 }) => {
-  type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  type HeadingTag = "h1" | "h2" | "h3" | "h4";
   const tag = `h${level}` as HeadingTag;
 
   return (

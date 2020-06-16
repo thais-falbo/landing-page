@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { imagePosition } from "atomic-design-types";
 
 interface Props {
   width: string;
   height: string;
   src: string;
   mirror: boolean;
-  position: "top" | "left" | "bottom" | "right" | "center";
+  position: imagePosition;
 }
 
 export const StyledImg = styled.div<Props>`

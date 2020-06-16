@@ -1,6 +1,7 @@
 import React from "react";
 import Paragraph from "./";
 import { render } from "@testing-library/react";
+import { size } from "atomic-design-types";
 import ThemeWrapper from "../../../utils/test/themeWrapper";
 
 describe("Atom - Paragraph", () => {
@@ -11,7 +12,7 @@ describe("Atom - Paragraph", () => {
   });
 
   describe("Sizes", () => {
-    const cases: Array<["small" | "normal" | "large", string]> = [
+    const cases: Array<[size, string]> = [
       ["small", "1.6rem"],
       ["normal", "1.8rem"],
       ["large", "2.2rem"],

@@ -2,6 +2,7 @@ import React from "react";
 import { number, boolean, text, select, color } from "@storybook/addon-knobs";
 import Heading from "./";
 import Theme from "../../../utils/styled/theme";
+import { headingLevel } from "atomic-design-types";
 
 export default {
   title: "Atoms|Heading",
@@ -19,7 +20,7 @@ export const Levels = () => (
 
 export const Playground = () => (
   <Heading
-    level={number("Level", 1, { min: 1, max: 4, step: 1 }) as 1 | 2 | 3 | 4}
+    level={number("Level", 1, { min: 1, max: 4, step: 1 }) as headingLevel}
     text={text("Text", "My Heading")}
     uppercase={boolean("Uppercase", false)}
     weight={select("Weight", ["bold", "black"], "bold")}

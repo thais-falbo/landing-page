@@ -1,4 +1,5 @@
 import React from "react";
+import { columns } from "atomic-design-types";
 import Theme from "../../../utils/styled/theme";
 import { number } from "@storybook/addon-knobs";
 import Grid from "./";
@@ -34,21 +35,7 @@ export const Playground = () => (
       {[...Array(number("Columns", 12, knobOptions))].map((_, i) => (
         <Grid.Column
           key={i}
-          span={
-            number("Column size", 1, knobOptions) as
-              | 1
-              | 2
-              | 3
-              | 4
-              | 5
-              | 6
-              | 7
-              | 8
-              | 9
-              | 10
-              | 11
-              | 12
-          }
+          span={number("Column size", 1, knobOptions) as columns}
         >
           <Item />
         </Grid.Column>

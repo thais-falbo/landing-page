@@ -1,10 +1,11 @@
 import React, { FC, memo } from "react";
 import { StyledParagraph } from "./styled";
+import { size } from "atomic-design-types";
 
 interface Props {
   text: string;
   color?: string | undefined;
-  size?: "small" | "normal" | "large";
+  size?: size;
 }
 
 const Paragraph: FC<Props> = ({ text, color, size = "normal" }) => (

@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./";
 import { render } from "@testing-library/react";
 import ThemeWrapper from "../../../utils/test/themeWrapper";
+import { size } from "atomic-design-types";
 
 describe("Atom - Button", () => {
   test("smoke test", () => {
@@ -19,7 +20,7 @@ describe("Atom - Button", () => {
   });
 
   describe("Sizes", () => {
-    const cases: Array<["small" | "normal" | "large", string]> = [
+    const cases: Array<[size, string]> = [
       ["small", "1rem"],
       ["normal", "1.8rem"],
       ["large", "3rem"],

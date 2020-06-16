@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { headingLevel, weight } from "atomic-design-types";
 
 interface Props {
-  level: 1 | 2 | 3 | 4;
+  level: headingLevel;
   color: string | undefined;
-  weight: "bold" | "black";
+  weight: weight;
   uppercase: boolean;
 }
 
