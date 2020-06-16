@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { headingLevel, weight } from "atomic-design-types";
+import { headingLevel, weight, color } from "atomic-design-types";
 
 interface Props {
   level: headingLevel;
-  color: string | undefined;
+  color?: color;
   weight: weight;
   uppercase: boolean;
 }

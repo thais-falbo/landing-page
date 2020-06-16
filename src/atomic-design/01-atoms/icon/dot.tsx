@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { color } from "atomic-design-types";
 
 interface Props {
   width: string;
   height: string;
-  color?: string | undefined;
+  color?: color;
 }
 
 const Dot = styled.span<Props>`

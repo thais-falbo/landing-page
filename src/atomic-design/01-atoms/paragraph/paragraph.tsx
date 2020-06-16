@@ -1,10 +1,10 @@
 import React, { FC, memo } from "react";
 import { StyledParagraph } from "./styled";
-import { size } from "atomic-design-types";
+import { size, color } from "atomic-design-types";
 
 interface Props {
   text: string;
-  color?: string | undefined;
+  color?: color;
   size?: size;
 }
 

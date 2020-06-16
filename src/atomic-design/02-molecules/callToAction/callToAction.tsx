@@ -1,4 +1,5 @@
 import React, { FC, memo } from "react";
+import { color } from "atomic-design-types";
 import { StyledCtaTitle } from "./styled";
 import Heading from "../../01-atoms/heading";
 import Button from "../../01-atoms/button";
@@ -8,7 +9,7 @@ import Icon from "../../01-atoms/icon";
 interface Props {
   headingText: string;
   paragraphText: string;
-  color?: string | undefined;
+  color?: color;
   button: React.ComponentProps<typeof Button>;
 }
 

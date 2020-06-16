@@ -4,4 +4,5 @@ declare module "atomic-design-types" {
   export type imagePosition = "top" | "left" | "bottom" | "right" | "center";
   export type headingLevel = 1 | 2 | 3 | 4;
   export type weight = "bold" | "black";
+  export type color = string | undefined;
 }
