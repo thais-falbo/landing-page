@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { darken } from "polished";
-import { size } from "atomic-design-types";
+import { size, color } from "atomic-design-types";
 
 interface Props {
   disabled: boolean;
   size: size;
   design: "default" | "text";
+  color: color;
 }
 
 export const StyledBtn = styled.button<Props>`
@@ -18,14 +19,14 @@ export const StyledBtn = styled.button<Props>`
     font-weight: ${({ theme }) => theme.fonts.poppins.weigths.normal};
 
     /* Design */
-    ${({ design, theme }) =>
+    ${({ design, color, theme }) =>
       (design === "default" &&
-        `background-color: ${theme.colors.primary};
+        `background-color: ${color || theme.colors.primary};
          color: white;
          border-radius: .8rem;`) ||
       (design === "text" &&
         `background-color: transparent;
-         color: ${theme.colors.primary};`)}
+         color: ${color || theme.colors.primary};`)}
 
     /* Disabled */
     ${({ disabled }) => disabled && `opacity: 0.5; cursor: not-allowed;`}
@@ -39,9 +40,9 @@ export const StyledBtn = styled.button<Props>`
 
   /* Hover */
   &:hover {
-    ${({ design, theme }) =>
+    ${({ design, color, theme }) =>
       (design === "default" &&
-        `background-color: ${darken(0.1, theme.colors.primary)}`) ||
+        `background-color: ${darken(0.1, color || theme.colors.primary)}`) ||
       (design === "text" && `text-decoration: underline;`)}
   }
 `;

@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import { StyledBtn } from "./styled";
-import { size } from "atomic-design-types";
+import { size, color } from "atomic-design-types";
 
 interface Props {
   text: string;
@@ -8,6 +8,7 @@ interface Props {
   size?: size;
   type?: "button" | "submit" | "reset";
   design?: "default" | "text";
+  color?: color;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -17,6 +18,7 @@ const Button: FC<Props> = ({
   size = "normal",
   type = "button",
   design = "default",
+  color,
   onClick,
 }) => (
   <StyledBtn
@@ -25,6 +27,7 @@ const Button: FC<Props> = ({
     size={size}
     type={type}
     design={design}
+    color={color}
   >
     {text}
   </StyledBtn>

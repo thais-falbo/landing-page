@@ -1,7 +1,8 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { text, boolean, select } from "@storybook/addon-knobs";
+import { text, boolean, select, color } from "@storybook/addon-knobs";
 import Button from "./";
+import Theme from "../../../utils/styled/theme";
 
 export default {
   title: "Atoms|Button",
@@ -16,5 +17,6 @@ export const Playground = () => (
     disabled={boolean("Disabled", false)}
     type={select("Type", ["button", "submit", "reset"], "button")}
     design={select("Design", ["default", "text"], "default")}
+    color={color("Color", Theme.colors.primary)}
   />
 );
