@@ -7,7 +7,7 @@ import { size } from "atomic-design-types";
 describe("Atom - Button", () => {
   test("smoke test", () => {
     const { getByText } = render(
-      ThemeWrapper(<Button text="Button" onClick={() => {}} />)
+      ThemeWrapper(<Button text="Button" onClick={() => {}} design="text" />)
     );
     expect(getByText(/Button/)).toBeInTheDocument();
   });
