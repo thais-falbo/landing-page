@@ -15,5 +15,6 @@ export const Playground = () => (
     onClick={action("click")}
     disabled={boolean("Disabled", false)}
     type={select("Type", ["button", "submit", "reset"], "button")}
+    design={select("Design", ["default", "text"], "default")}
   />
 );

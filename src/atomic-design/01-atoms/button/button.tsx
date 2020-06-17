@@ -7,6 +7,7 @@ interface Props {
   disabled?: boolean;
   size?: size;
   type?: "button" | "submit" | "reset";
+  design?: "default" | "text";
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -15,9 +16,16 @@ const Button: FC<Props> = ({
   disabled = false,
   size = "normal",
   type = "button",
+  design = "default",
   onClick,
 }) => (
-  <StyledBtn onClick={onClick} disabled={disabled} size={size} type={type}>
+  <StyledBtn
+    onClick={onClick}
+    disabled={disabled}
+    size={size}
+    type={type}
+    design={design}
+  >
     {text}
   </StyledBtn>
 );
