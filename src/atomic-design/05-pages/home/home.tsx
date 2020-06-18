@@ -1,8 +1,14 @@
 import React, { FC } from "react";
 import HomeTemplate from "../../04-templates/home";
 import Capsule from "../../../assets/images/capsule.jpg";
+import Theme from "../../../utils/styled/theme";
 
 const props: React.ComponentProps<typeof HomeTemplate> = {
+  header: {
+    links: ["blog", "popular", "archive", "about"],
+    linkColor: "white",
+    backgroundColor: Theme.colors.primary,
+  },
   hero: {
     image: {
       src: Capsule,
@@ -24,6 +30,6 @@ const props: React.ComponentProps<typeof HomeTemplate> = {
   },
 };
 
-const Home: FC = () => <HomeTemplate hero={props.hero} />;
+const Home: FC = () => <HomeTemplate header={props.header} hero={props.hero} />;
 
 export default Home;
