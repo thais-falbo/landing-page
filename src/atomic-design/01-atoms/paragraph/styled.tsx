@@ -10,6 +10,7 @@ interface Props {
 export const StyledParagraph = styled.p<Props>`
   color: ${({ color, theme }) => color || theme.colors.darkBlue};
   line-height: 1.6;
+  white-space: pre-wrap;
 
   font-family: ${({ theme }) => theme.fonts.poppins.name};
   font-weight: ${({ theme }) => theme.fonts.poppins.weigths.normal};
