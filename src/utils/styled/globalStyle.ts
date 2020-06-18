@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: var(--font-size);
   }
+
+  body { 
+    background-color: #f8f8f8;
+  }
 `;
 
 export default GlobalStyle;
