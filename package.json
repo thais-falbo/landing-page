@@ -37,6 +37,8 @@
       "!src/**/*.stories.{js,jsx,ts,tsx}",
       "!src/utils/**",
       "!src/atomic-design/**/index.ts",
+      "!src/atomic-design/04-templates/**",
+      "!src/atomic-design/05-pages/**",
       "!src/index.tsx",
       "!<rootDir>/node_modules/"
     ],
