@@ -47,7 +47,8 @@ export const StyledHeroContent = styled.div`
   align-content: stretch;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}) {
-    align-items: center;
-    align-content: stretch;
+    justify-content: center;
+    align-content: flex-start;
+    flex-direction: column;
   }
 `;
