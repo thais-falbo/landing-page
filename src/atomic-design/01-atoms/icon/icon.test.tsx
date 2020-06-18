@@ -17,4 +17,19 @@ describe("Atom - icons", () => {
     );
     expect(container.firstChild).toBeInTheDocument();
   });
+
+  describe("arrow", () => {
+    test.each(["left", "right"])("%p direction", (direction) => {
+      const { container } = render(
+        ThemeWrapper(
+          <Icon.Arrow
+            width="1rem"
+            height="1rem"
+            direction={direction as "left" | "right"}
+          />
+        )
+      );
+      expect(container.firstChild).toBeInTheDocument();
+    });
+  });
 });
