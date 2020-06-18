@@ -4,11 +4,11 @@ import { columns } from "atomic-design-types";
 export const Container = styled.div`
   max-width: ${({ theme }) => theme.grid.container.width};
   margin: 0 auto;
+  padding: 0 2rem;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 100%;
+    max-width: 100%;
     margin: 0;
-    padding: 0 1rem;
   }
 `;
 
@@ -33,15 +33,28 @@ export const Row = styled.div`
 `;
 
 interface ColumnProps {
-  /** Column size */
-  span?: columns;
+  sm?: columns;
+  md?: columns;
+  lg?: columns;
+  xl?: columns;
 }
 
 export const Column = styled.div<ColumnProps>`
-  grid-column: span ${({ span }) => span || 1};
+  /* width: 100%; */
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 100%;
-    grid-column: span 1;
+  @media only screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    ${({ sm }) => sm && `grid-column: span ${sm}`};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    ${({ md }) => md && `grid-column: span ${md}`};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    ${({ lg }) => lg && `grid-column: span ${lg}`};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    ${({ xl }) => xl && `grid-column: span ${xl}`};
   }
 `;

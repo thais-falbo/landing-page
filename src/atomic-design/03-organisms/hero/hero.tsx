@@ -45,7 +45,7 @@ const Hero: FC<Props> = ({ image, cta, trends, height = "100vh" }) => {
         {/* Text */}
         <Grid.Container>
           <Grid.Row>
-            <Grid.Column span={6}>
+            <Grid.Column lg={6} sm={8}>
               <CallToAction {...cta} />
             </Grid.Column>
           </Grid.Row>

@@ -33,10 +33,7 @@ export const Playground = () => (
   <Grid.Container>
     <Grid.Row>
       {[...Array(number("Columns", 12, knobOptions))].map((_, i) => (
-        <Grid.Column
-          key={i}
-          span={number("Column size", 1, knobOptions) as columns}
-        >
+        <Grid.Column key={i}>
           <Item />
         </Grid.Column>
       ))}

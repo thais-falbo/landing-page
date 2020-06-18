@@ -14,7 +14,7 @@ const Trending: FC<Props> = ({ trends }) => (
     <Grid.Container>
       <Grid.Row>
         {/* Title */}
-        <Grid.Column span={3} className="item">
+        <Grid.Column lg={3} className="item">
           <StyledTitle>
             <Heading level={4} text="Trending" color="white" />
             <Heading level={4} text="Today" color={Theme.colors.primary} />
@@ -23,7 +23,7 @@ const Trending: FC<Props> = ({ trends }) => (
 
         {/* Trends */}
         {trends.map((trend, i) => (
-          <Grid.Column span={3} className="item" key={i}>
+          <Grid.Column lg={3} className="item" key={i}>
             <StyledTrend>
               <Paragraph text={trend} color="white" size="small" />
             </StyledTrend>
