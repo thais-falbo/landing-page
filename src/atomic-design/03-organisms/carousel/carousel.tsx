@@ -21,7 +21,7 @@ const Carousel: FC<Props> = ({ items }) => {
     speed: 500,
     responsive: [
       {
-        breakpoint: parseInt(Theme.breakpoints.lg.replace("px", "")),
+        breakpoint: Theme.breakpoints.lg,
         settings: {
           slidesToShow: 3,
           arrows: false,
@@ -29,7 +29,7 @@ const Carousel: FC<Props> = ({ items }) => {
         },
       },
       {
-        breakpoint: parseInt(Theme.breakpoints.sm.replace("px", "")),
+        breakpoint: Theme.breakpoints.sm,
         settings: {
           slidesToShow: 1,
           arrows: false,

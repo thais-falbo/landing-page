@@ -34,7 +34,7 @@ export const StyledNavList = styled.ul<NavListProps>`
   margin: 0;
   padding: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     display: block;
     position: absolute;
     padding-top: 96px; /* header height */
@@ -66,7 +66,7 @@ export const StyledNavItem = styled.li`
     letter-spacing: 0.1rem;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     display: block;
     text-align: center;
     margin-top: 3.5rem;
@@ -115,7 +115,7 @@ export const StyledNavBurgerIcon = styled.span<NavBurgerIconProps>`
     ${({ menuOpen }) => menuOpen && `transform: rotate(90deg); bottom: 0;`}
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     display: inline-block;
   }
 `;

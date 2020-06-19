@@ -11,7 +11,7 @@ export const StyledAboutImgWrapper = styled.div`
   overflow: hidden;
   margin: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     width: 100%;
     height: 30rem;
   }

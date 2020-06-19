@@ -24,7 +24,7 @@ export const StyledHero = styled.div<Props>`
     height: 100%;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     &,
     ${StyledImg} {
       height: 80vh;
@@ -46,7 +46,7 @@ export const StyledHeroContent = styled.div`
   align-items: flex-end;
   align-content: stretch;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}px) {
     justify-content: center;
     align-content: flex-start;
     flex-direction: column;

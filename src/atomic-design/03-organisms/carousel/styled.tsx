@@ -5,7 +5,7 @@ export const StyledCarousel = styled.div`
   position: relative;
   max-width: 100%;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     margin: 5rem 0 15rem 0;
   }
 
@@ -29,7 +29,7 @@ export const StyledCarousel = styled.div`
 
       /* Hide arrows */
       @media only screen and (max-width: ${({ theme }) =>
-          theme.breakpoints.lg}) {
+          theme.breakpoints.lg}px) {
         display: none;
       }
     }

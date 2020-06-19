@@ -31,7 +31,7 @@ describe("Organism - Hero", () => {
   });
 
   test("should render trending component according to screen size", () => {
-    const breakpointSize = parseInt(Theme.breakpoints.xl.replace("px", ""));
+    const breakpointSize = Theme.breakpoints.xl;
 
     const resizeScreen = (size: number) => {
       global.innerWidth = size;

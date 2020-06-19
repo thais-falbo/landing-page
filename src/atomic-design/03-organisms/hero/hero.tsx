@@ -17,7 +17,7 @@ interface Props {
 const Hero: FC<Props> = ({ image, cta, trends, height = "100vh" }) => {
   // The trending component is not shown in small screens, so we use a state
   // to watch the window size and decide if it's rendered or not
-  const breakpoint: number = parseInt(Theme.breakpoints.xl.replace("px", ""));
+  const breakpoint: number = Theme.breakpoints.xl;
   const [isDesktop, setDesktop] = useState(window.innerWidth > breakpoint);
 
   const updateMedia = () => {

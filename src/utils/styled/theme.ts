@@ -28,13 +28,13 @@ const Theme = {
   },
   breakpoints: {
     // Small screen / phone
-    sm: "576px",
+    sm: 576,
     // Medium screen / tablet
-    md: "768px",
+    md: 768,
     // Large screen / desktop
-    lg: "992px",
+    lg: 992,
     // Extra large screen / wide desktop
-    xl: "1200px",
+    xl: 1200,
   },
 };
 
