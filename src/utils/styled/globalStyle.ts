@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   /* Tablet */
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}){
     :root {
-      --font-size: 56.25%; /* 1 rem = 9px, 9/16 = 50% */
+      --font-size: 56.25%; /* 1 rem = 9px, 9/16 = 56.25% */
     }
   }
 
