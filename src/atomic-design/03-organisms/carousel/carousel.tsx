@@ -61,15 +61,13 @@ const Carousel: FC<Props> = ({ items }) => {
 
   return (
     <Grid.Container>
-      <div style={{ display: "flex" }}>
-        <StyledCarousel>
-          {renderButton("left")}
+      <StyledCarousel>
+        {renderButton("left")}
 
-          <Slider {...settings}>{renderSlides()}</Slider>
+        <Slider {...settings}>{renderSlides()}</Slider>
 
-          {renderButton("right")}
-        </StyledCarousel>
-      </div>
+        {renderButton("right")}
+      </StyledCarousel>
     </Grid.Container>
   );
 };

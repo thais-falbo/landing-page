@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const StyledCarousel = styled.div`
+  margin: 15rem 0 10rem 0;
   position: relative;
   max-width: 100%;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin: 5rem 0 15rem 0;
+  }
 
   .slick {
     &-slide {
