@@ -9,7 +9,9 @@ describe("Atom - Grid", () => {
       ThemeWrapper(
         <Grid.Container>
           <Grid.Row>
-            <Grid.Column lg={1}>Test</Grid.Column>
+            <Grid.Column sm={1} md={2} lg={3} xl={4}>
+              Test
+            </Grid.Column>
           </Grid.Row>
         </Grid.Container>
       )
