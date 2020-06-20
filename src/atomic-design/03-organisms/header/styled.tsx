@@ -52,8 +52,6 @@ export const StyledNavList = styled.ul<NavListProps>`
       opacity: 1;
     `
         : `
-      height: 0;
-      opacity: 0;
     `}
   }
 `;
@@ -83,7 +81,7 @@ interface NavBurgerIconProps {
 }
 
 export const StyledNavBurgerIcon = styled.span<NavBurgerIconProps>`
-  display: none;
+  display: inline-block;
   position: relative;
 
   ${({ menuOpen }) => menuOpen && `transform: rotate(45deg);`}
@@ -113,9 +111,5 @@ export const StyledNavBurgerIcon = styled.span<NavBurgerIconProps>`
   &:after {
     bottom: -10px;
     ${({ menuOpen }) => menuOpen && `transform: rotate(90deg); bottom: 0;`}
-  }
-
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    display: inline-block;
   }
 `;
