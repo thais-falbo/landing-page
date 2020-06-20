@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./";
 import { render, fireEvent } from "@testing-library/react";
-import themeWrapper from "../../../utils/test/themeWrapper";
+import ThemeWrapper from "../../../utils/test/themeWrapper";
 import resizeScreen from "../../../utils/test/resizeScreen";
 import Theme from "../../../utils/styled/theme";
 
 describe("Organism - header", () => {
-  const component = themeWrapper(
+  const component = ThemeWrapper(
     <Header backgroundColor="red" links={["home"]} />
   );
 

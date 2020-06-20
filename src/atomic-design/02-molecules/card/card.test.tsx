@@ -2,12 +2,12 @@ import React from "react";
 import Card from "./";
 import { render } from "@testing-library/react";
 import Capsule from "../../../assets/images/capsule.jpg";
-import themeWrapper from "../../../utils/test/themeWrapper";
+import ThemeWrapper from "../../../utils/test/themeWrapper";
 
 describe("Molecule - card", () => {
   test("smoke test", () => {
     const { getByText, getByRole } = render(
-      themeWrapper(
+      ThemeWrapper(
         <Card
           imageSrc={Capsule}
           imageAlt="Capsule"
