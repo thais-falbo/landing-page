@@ -52,6 +52,8 @@ export const StyledNavList = styled.ul<NavListProps>`
       opacity: 1;
     `
         : `
+        height: 0;
+        opacity: 0;
     `}
   }
 `;

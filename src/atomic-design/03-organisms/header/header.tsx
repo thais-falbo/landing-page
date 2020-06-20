@@ -18,7 +18,7 @@ interface Props {
 }
 
 const Header: FC<Props> = ({ backgroundColor, linkColor, links }) => {
-  const isWindowSmall = window.innerWidth < Theme.breakpoints.lg;
+  const isWindowSmall = () => window.innerWidth < Theme.breakpoints.lg;
 
   const [showBurger, setShowBurger] = useState(isWindowSmall);
   const [background, setBackground] = useState("transparent");
@@ -29,7 +29,7 @@ const Header: FC<Props> = ({ backgroundColor, linkColor, links }) => {
     else setBackground(backgroundColor);
   };
 
-  const listenResizeEvent = () => setShowBurger(isWindowSmall);
+  const listenResizeEvent = () => setShowBurger(isWindowSmall());
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
