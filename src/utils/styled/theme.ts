@@ -5,6 +5,7 @@ const Theme = {
     mediumBlue: "#8C94A8",
     mediumGray: "#908C8C",
     lightGray: "#F8F8F8",
+    lightGray2: "#F1F1F2",
   },
   fonts: {
     poppins: {

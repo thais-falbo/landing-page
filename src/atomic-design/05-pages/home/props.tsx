@@ -85,11 +85,16 @@ const about = {
   imageSrc: Capsule,
 };
 
+const footer = {
+  text: "© 2016 Created by Joyjet Digital Space Agency",
+};
+
 const props: React.ComponentProps<typeof HomeTemplate> = {
   header,
   hero,
   carousel,
   about,
+  footer,
 };
 
 export default props;
