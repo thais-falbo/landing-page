@@ -3,8 +3,8 @@ import Hero from "./";
 import { render } from "@testing-library/react";
 import Theme from "../../../utils/styled/theme";
 import ThemeWrapper from "../../../utils/test/themeWrapper";
+import resizeScreen from "../../../utils/test/resizeScreen";
 import Capsule from "../../../assets/images/capsule.jpg";
-import { act } from "react-dom/test-utils";
 
 describe("Organism - Hero", () => {
   const trends = Array(3).fill(
@@ -33,20 +33,15 @@ describe("Organism - Hero", () => {
   test("should render trending component according to screen size", () => {
     const breakpointSize = Theme.breakpoints.xl;
 
-    const resizeScreen = (size: number) => {
-      global.innerWidth = size;
-      global.dispatchEvent(new Event("resize"));
-    };
-
     const { getAllByText, queryByText } = render(component);
 
     // Make screen small
-    act(() => resizeScreen(breakpointSize));
+    resizeScreen(breakpointSize);
 
     expect(queryByText(/Trending|Today/)).not.toBeInTheDocument();
 
     // Make screen bigger
-    act(() => resizeScreen(breakpointSize + 1));
+    resizeScreen(breakpointSize + 1);
 
     const elements = getAllByText(/Trending|Today/);
 

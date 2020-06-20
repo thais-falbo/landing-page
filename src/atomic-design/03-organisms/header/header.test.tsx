@@ -2,14 +2,10 @@ import React from "react";
 import Header from "./";
 import { render, fireEvent } from "@testing-library/react";
 import themeWrapper from "../../../utils/test/themeWrapper";
+import resizeScreen from "../../../utils/test/resizeScreen";
 import Theme from "../../../utils/styled/theme";
 
 describe("Organism - header", () => {
-  const resizeScreen = (size: number) => {
-    global.innerWidth = size;
-    fireEvent(window, new Event("resize"));
-  };
-
   const component = themeWrapper(
     <Header backgroundColor="red" links={["home"]} />
   );
