@@ -9,7 +9,7 @@ export default {
   component: Button,
 };
 
-export const Playground = () => (
+export const Example = () => (
   <Button
     text={text("Text", "Click")}
     size={select("Size", ["small", "normal", "large"], "normal")}

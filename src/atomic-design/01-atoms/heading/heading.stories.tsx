@@ -18,7 +18,7 @@ export const Levels = () => (
   </>
 );
 
-export const Playground = () => (
+export const Example = () => (
   <Heading
     level={number("Level", 1, { min: 1, max: 4, step: 1 }) as headingLevel}
     text={text("Text", "My Heading")}

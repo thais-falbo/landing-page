@@ -29,7 +29,7 @@ const Item = () => (
 
 const knobOptions = { min: 1, max: 12, step: 1 };
 
-export const Playground = () => (
+export const Example = () => (
   <Grid.Container>
     <Grid.Row>
       {[...Array(number("Columns", 12, knobOptions))].map((_, i) => (

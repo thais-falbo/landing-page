@@ -8,7 +8,7 @@ export default {
   component: Image,
 };
 
-export const Playground = () => (
+export const Example = () => (
   <Image
     src={Capsule}
     alt="Capsule"
