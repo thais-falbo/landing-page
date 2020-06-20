@@ -1,5 +1,4 @@
 import React from "react";
-import { columns } from "atomic-design-types";
 import Theme from "../../../utils/styled/theme";
 import { number } from "@storybook/addon-knobs";
 import Grid from "./";

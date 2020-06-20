@@ -13,8 +13,6 @@ describe("Molecule - card", () => {
           imageAlt="Capsule"
           heading="heading"
           paragraph="paragraph"
-          width="1rem"
-          height="1rem"
         />
       )
     );
