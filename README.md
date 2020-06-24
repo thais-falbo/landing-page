@@ -1,3 +1,13 @@
+# Landing Page
+
+<p align="center">
+
+[![Build Status](https://travis-ci.com/thaisfalbo/landing-page.svg?token=yJ6Yj2cspdTxeFJPxzsv&branch=master)](https://travis-ci.com/thaisfalbo/landing-page)
+
+[![Coverage Status](https://coveralls.io/repos/github/thaisfalbo/landing-page/badge.svg?branch=master&t=5vF2ru)](https://coveralls.io/github/thaisfalbo/landing-page?branch=master)
+
+</p>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -16,6 +26,10 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn test:coverage`
+
+Runs the test runner to generate coverage report.
 
 ### `yarn build`
 
