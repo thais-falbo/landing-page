@@ -87,6 +87,7 @@
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
     "@types/react-slick": "^0.23.4",
+    "coveralls": "^3.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "prettier": "^2.0.5"
